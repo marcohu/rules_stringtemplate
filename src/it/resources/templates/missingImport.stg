@@ -1,0 +1,5 @@
+import "."
+ 
+constants(typename, names) ::= <<
+public enum <typename> { <names; separator=", "> }
+>>

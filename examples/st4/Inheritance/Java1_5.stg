@@ -1,0 +1,7 @@
+// Java1_5.stg
+import "Java1_4.stg"
+ 
+/** Override constants from Java1_4.stg */
+constants(typename, names) ::= <<
+public enum <typename> { <names; separator=", "> }
+>>
