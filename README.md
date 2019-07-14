@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/marcohu/rules_stringtemplate.png?branch=master)](https://travis-ci.org/marcohu/rules_stringtemplate)
+[![Java 8+](https://img.shields.io/badge/java-8+-4c7e9f.svg)](https://java.oracle.com)
+[![License](https://img.shields.io/badge/license-Apache2-blue.svg)](https://github.com/marcohu/rules_stringtemplate/blob/master/LICENSE)
+
 # StringTemplate Rules for Bazel
 
 These build rules are used for processing [StringTemplate](https://www.stringtemplate.org)
