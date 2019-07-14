@@ -25,7 +25,7 @@ http_archive(
     name = "rules_stringtemplate",
     urls = ["https://github.com/marcohu/rules_stringtemplate/archive/0.1.0.tar.gz"],
     strip_prefix = "rules_stringtemplate-0.1.0",
-    sha256 = "",
+    sha256 = "e8d7f9e7ff20e73a8c7e9af0b884a4afac15af26c7cb13d1cf916f634252c489",
 )
 ```
 
