@@ -5,9 +5,8 @@
 ## stringtemplate
 
 <pre>
-stringtemplate(<a href="#stringtemplate-name">name</a>, <a href="#stringtemplate-adaptor">adaptor</a>, <a href="#stringtemplate-controller">controller</a>, <a href="#stringtemplate-data">data</a>, <a href="#stringtemplate-deps">deps</a>, <a href="#stringtemplate-encoding">encoding</a>,
-               <a href="#stringtemplate-failOnError">failOnError</a>, <a href="#stringtemplate-imports">imports</a>, <a href="#stringtemplate-json">json</a>, <a href="#stringtemplate-method">method</a>, <a href="#stringtemplate-out">out</a>, <a href="#stringtemplate-raw">raw</a>, <a href="#stringtemplate-src">src</a>,
-               <a href="#stringtemplate-startDelim">startDelim</a>, <a href="#stringtemplate-stopDelim">stopDelim</a>, <a href="#stringtemplate-verbose">verbose</a>)
+stringtemplate(<a href="#stringtemplate-name">name</a>, <a href="#stringtemplate-adaptor">adaptor</a>, <a href="#stringtemplate-controller">controller</a>, <a href="#stringtemplate-data">data</a>, <a href="#stringtemplate-deps">deps</a>, <a href="#stringtemplate-encoding">encoding</a>, <a href="#stringtemplate-failOnError">failOnError</a>,
+               <a href="#stringtemplate-imports">imports</a>, <a href="#stringtemplate-json">json</a>, <a href="#stringtemplate-method">method</a>, <a href="#stringtemplate-out">out</a>, <a href="#stringtemplate-raw">raw</a>, <a href="#stringtemplate-src">src</a>, <a href="#stringtemplate-startDelim">startDelim</a>, <a href="#stringtemplate-stopDelim">stopDelim</a>, <a href="#stringtemplate-verbose">verbose</a>)
 </pre>
 
 Runs [StringTemplate 4](https://www.stringtemplate.org/) on a set of grammars.
