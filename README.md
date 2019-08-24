@@ -32,9 +32,9 @@ http_archive(
 To load the necessary dependencies, you can use the provided convenience function:
 
 ```python
-load("@rules_stringtemplate//stringtemplate:deps.bzl", "stringtemplate_dependencies")
+load("@rules_stringtemplate//stringtemplate:repositories.bzl", "rules_stringtemplate_dependencies")
 
-stringtemplate_dependencies("4.1")
+rules_stringtemplate_dependencies("4.1")
 ```
 
 More detailed instructions can be found in the [Setup](docs/setup.md#setup) document.

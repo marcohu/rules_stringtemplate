@@ -20,9 +20,9 @@ convenience, a helper function is provided to simplify this process. Add the
 following to make the dependencies for StringTemplate 4.1 available:
 
 ```python
-load("@rules_stringtemplate//stringtemplate:deps.bzl", "stringtemplate_dependencies")
+load("@rules_stringtemplate//stringtemplate:repositories.bzl", "rules_stringtemplate_dependencies")
 
-stringtemplate_dependencies("4.1")
+rules_stringtemplate_dependencies("4.1")
 ```
 
 The currently bundled StringTemplate releases are:
@@ -37,18 +37,18 @@ following loads the StringTemplate 4.1 release, but might cause a different rele
 be imported with a future version:
 
 ```python
-load("@rules_stringtemplate//stringtemplate:deps.bzl", "stringtemplate_dependencies")
+load("@rules_stringtemplate//stringtemplate:repositories.bzl", "rules_stringtemplate_dependencies")
 
-stringtemplate_dependencies("4")
+rules_stringtemplate_dependencies("4")
 ```
 
 For the most recent bundled StringTemplate release it is also possible to omit the
 version number altogether, but again use with caution:
 
 ```python
-load("@rules_stringtemplate//stringtemplate:deps.bzl", "stringtemplate_dependencies")
+load("@rules_stringtemplate//stringtemplate:repositories.bzl", "rules_stringtemplate_dependencies")
 
-stringtemplate_dependencies()
+rules_stringtemplate_dependencies()
 ```
 
 If your preferred StringTemplate release is not bundled or you want to download the

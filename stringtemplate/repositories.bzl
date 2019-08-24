@@ -4,7 +4,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_jar")
 
 _v4 = ["4", "4.0.2", "4.0.7", "4.0.8", "4.1"]
 
-def stringtemplate_dependencies(version = "4.1"):
+def rules_stringtemplate_dependencies(version = "4.1"):
     """Loads the dependencies for the specified StringTemplate release.
 
     Args:

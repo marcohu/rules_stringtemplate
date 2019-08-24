@@ -15,7 +15,7 @@ stardoc(
 )
 
 stardoc(
-    name = "deps",
-    out = "deps.md",
-    input = "deps.bzl",
+    name = "repositories",
+    out = "repositories.md",
+    input = "repositories.bzl",
 )

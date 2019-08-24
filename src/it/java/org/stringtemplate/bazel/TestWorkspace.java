@@ -46,8 +46,8 @@ class TestWorkspace
             String contents = "workspace(name=\"examples\")\n" + "local_repository(\n"
                 + "    name = \"rules_stringtemplate\",\n"
                 + "    path = \"../../../rules_stringtemplate\",\n" + ")\n"
-                + "load(\"@rules_stringtemplate//stringtemplate:deps.bzl\", \"stringtemplate_dependencies\")\n"
-                + "stringtemplate_dependencies()";
+                + "load(\"@rules_stringtemplate//stringtemplate:repositories.bzl\", \"rules_stringtemplate_dependencies\")\n"
+                + "rules_stringtemplate_dependencies()";
             Files.write(workspace, contents.getBytes(StandardCharsets.UTF_8));
         }
     }

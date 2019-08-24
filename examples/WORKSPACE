@@ -7,6 +7,6 @@ local_repository(
     path = "..",
 )
 
-load("@rules_stringtemplate//stringtemplate:deps.bzl", "stringtemplate_dependencies")
+load("@rules_stringtemplate//stringtemplate:repositories.bzl", "rules_stringtemplate_dependencies")
 
-stringtemplate_dependencies("4.1.0")
+rules_stringtemplate_dependencies("4.1.0")

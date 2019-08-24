@@ -40,9 +40,9 @@ load("@io_bazel_rules_sass//:defs.bzl", "sass_repositories")
 
 sass_repositories()
 
-load("@rules_stringtemplate//stringtemplate:deps.bzl", "stringtemplate_dependencies")
+load("@rules_stringtemplate//stringtemplate:repositories.bzl", "rules_stringtemplate_dependencies")
 
-stringtemplate_dependencies("4.1")
+rules_stringtemplate_dependencies("4.1")
 
 http_jar(
     name = "javax_json",
