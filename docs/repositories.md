@@ -10,25 +10,11 @@ rules_stringtemplate_dependencies(<a href="#rules_stringtemplate_dependencies-ve
 
 Loads the dependencies for the specified StringTemplate release.
 
-### Parameters
+**PARAMETERS**
 
-<table class="params-table">
-  <colgroup>
-    <col class="col-param" />
-    <col class="col-description" />
-  </colgroup>
-  <tbody>
-    <tr id="rules_stringtemplate_dependencies-version">
-      <td><code>version</code></td>
-      <td>
-        optional. default is <code>"4.1"</code>
-        <p>
-          The release version to make available.
-         If nothing is specified, loads the most recent bundled release.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+| Name  | Description | Default Value |
+| :-------------: | :-------------: | :-------------: |
+| version |  The release version to make available.          If nothing is specified, loads the most recent bundled release.   |  <code>"4.1"</code> |
 
 

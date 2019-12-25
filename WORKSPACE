@@ -8,37 +8,15 @@ local_repository(
     path = "./examples",
 )
 
-# TODO workaround for https://github.com/bazelbuild/skydoc/issues/166
-"""
 git_repository(
-    name = "io_bazel_skydoc",
-    remote = "https://github.com/bazelbuild/skydoc.git",
-    tag = "0.3.0",
-)
-"""
-
-git_repository(
-    name = "io_bazel_skydoc",
-    commit = "01ec165b8f26905746404e7e58d13ab5e5e36154",
-    remote = "https://github.com/graknlabs/skydoc.git",
-    shallow_since = "1559753887 +0300",
+    name = "io_bazel_stardoc",
+    remote = "https://github.com/bazelbuild/stardoc.git",
+    tag = "0.4.0",
 )
 
-load("@io_bazel_skydoc//:setup.bzl", "skydoc_repositories")
+load("@io_bazel_stardoc//:setup.bzl", "stardoc_repositories")
 
-skydoc_repositories()
-
-load("@io_bazel_rules_sass//:package.bzl", "rules_sass_dependencies")
-
-rules_sass_dependencies()
-
-load("@build_bazel_rules_nodejs//:defs.bzl", "node_repositories")
-
-node_repositories()
-
-load("@io_bazel_rules_sass//:defs.bzl", "sass_repositories")
-
-sass_repositories()
+stardoc_repositories()
 
 load("@rules_stringtemplate//stringtemplate:repositories.bzl", "rules_stringtemplate_dependencies")
 

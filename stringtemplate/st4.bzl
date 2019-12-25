@@ -76,7 +76,7 @@ The template attributes must be provided by at least one of the [`controller`](#
                                 public no-args method named &quot;adaptors&quot; that
                                 returns the mappings between attribute types and model
                                 adaptors as
-                                <code>java.util.Map&lt;Class&lt;?&gt;, org.stringtemplate.v4.misc.ModelAdaptor&gt;</code>.
+                                `java.util.Map<Class<?>, org.stringtemplate.v4.misc.ModelAdaptor>`
                                 """,
         ),
         "controller": attr.string(
@@ -84,7 +84,7 @@ The template attributes must be provided by at least one of the [`controller`](#
                                 controller to use for attribute injection.
                                 The class must have a public no-args constructor and a
                                 public method that returns the attributes as
-                                <code>java.util.Map&lt;String, Object&gt;</code>. If no
+                                `java.util.Map<String, Object>`. If no
                                 method name is specified via the &quot;method&quot;
                                 attribute, the method name &quot;attributes&quot; will be
                                 assumed.
@@ -128,7 +128,7 @@ The template attributes must be provided by at least one of the [`controller`](#
                                 Can be a static or instance method, the type will
                                 be automatically detected at invocation time. The return type
                                 of the specified method must be of type
-                                <code>java.util.Map&lt;String, Object&gt;</code>.
+                                `java.util.Map<String, Object>`.
                                 """,
         ),
         "out": attr.string(doc = "The relative path of the resulting file.", mandatory = True),
