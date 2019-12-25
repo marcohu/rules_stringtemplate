@@ -14,7 +14,7 @@ Loads the dependencies for the specified StringTemplate release.
 
 
 | Name  | Description | Default Value |
-| :-------------: | :-------------: | :-------------: |
-| version |  The release version to make available.          If nothing is specified, loads the most recent bundled release.   |  <code>"4.1"</code> |
+| --------------- | --------------- | --------------- |
+| <a name="rules_stringtemplate_dependencies-version"></a>version |  The release version to make available.          If nothing is specified, loads the most recent bundled release.   |  <code>"4.1"</code> |
 
 

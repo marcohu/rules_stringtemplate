@@ -17,12 +17,14 @@ stardoc(
     name = "st4",
     out = "st4.md",
     input = "st4.bzl",
+    rule_template = "//stringtemplate:rule.vm",
 )
 
 stardoc(
     name = "repositories",
     out = "repositories.md",
     input = "repositories.bzl",
+    func_template = "//stringtemplate:func.vm",
     deps = [
         ":refs",
     ],
