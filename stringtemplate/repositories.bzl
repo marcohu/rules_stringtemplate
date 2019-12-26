@@ -2,16 +2,18 @@
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_jar")
 
-_v4 = ["4", "4.0.2", "4.0.7", "4.0.8", "4.1"]
+_v4 = ["4", "4.0.2", "4.0.7", "4.0.8", "4.1", "4.2"]
 
-def rules_stringtemplate_dependencies(version = "4.1"):
+def rules_stringtemplate_dependencies(version = "4.2"):
     """Loads the dependencies for the specified StringTemplate release.
 
     Args:
         version: The release version to make available.
                  If nothing is specified, loads the most recent bundled release.
     """
-    if (version == "4" or version == "4.1" or version == "4.1.0"):
+    if (version == "4" or version == "4.2" or version == "4.2.0"):
+        _dependencies("org/antlr/ST4/4.2/ST4-4.2.jar", "c0ebf2d9d31e5ad22f667410e9ea51d383a9cbdfb4fa77268ce6ff5aa74abd21")
+    elif (version == "4.1" or version == "4.1.0"):
         _dependencies("org/antlr/ST4/4.1/ST4-4.1.jar", "8b1ccaed9edc55cd255d9c19c4d8da4756d9b6fcb435671292b43470b16d75d8")
     elif (version == "4.0.8"):
         _dependencies("org/antlr/ST4/4.0.8/ST4-4.0.8.jar", "58caabc40c9f74b0b5993fd868e0f64a50c0759094e6a251aaafad98edfc7a3b")

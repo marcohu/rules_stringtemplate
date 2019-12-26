@@ -20,7 +20,7 @@ stardoc_repositories()
 
 load("@rules_stringtemplate//stringtemplate:repositories.bzl", "rules_stringtemplate_dependencies")
 
-rules_stringtemplate_dependencies("4.1")
+rules_stringtemplate_dependencies("4.2")
 
 http_jar(
     name = "javax_json",
