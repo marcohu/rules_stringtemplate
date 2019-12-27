@@ -9,6 +9,12 @@ local_repository(
 )
 
 git_repository(
+    name = "stardoc_templates",
+    remote = "https://github.com/marcohu/stardoc_templates.git",
+    tag = "0.1.0",
+)
+
+git_repository(
     name = "io_bazel_stardoc",
     remote = "https://github.com/bazelbuild/stardoc.git",
     tag = "0.4.0",
