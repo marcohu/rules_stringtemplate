@@ -140,7 +140,10 @@ The template attributes must be provided by at least one of the [`controller`](#
                                 StringTemplate.
                                 """,
         ),
-        "raw": attr.bool(doc = """Use raw template file format (without headers, similar to v3)."""),
+        "raw": attr.bool(
+            doc = """Use raw template file format (without headers, similar to v3).
+                Requires StringTemplate 4.0.7 or later.
+            """),
         "src": attr.label(allow_single_file = True, doc = "The template to process.", mandatory = True),
         "startDelim": attr.string(doc = "The character to use as start delimiter in templates.", default = "<"),
         "stopDelim": attr.string(doc = "The character to use as stop delimiter in templates.", default = ">"),

@@ -196,19 +196,26 @@ public class STRules
         {
             if (options.raw)
             {
-                Class<?> $STRawGroupDir = loader.loadClass("org.stringtemplate.v4.STRawGroupDir");
-                Object group = $STRawGroupDir
-                    .getConstructor(String.class, String.class, char.class, char.class)
-                    .newInstance(path.getParent().toString(), options.encoding.name(), options.startDelim, options.stopDelim);
-                $STRawGroupDir.getField("verbose").set(group, options.verbose);
-                $STRawGroupDir
-                    .getMethod("setListener", $STErrorListener)
-                    .invoke(group, errorHandler);
-                st = $STRawGroupDir
-                    .getMethod("getInstanceOf", String.class)
-                    .invoke(group, stripExtension(path.getFileName().toString()));
+                try
+                {
+                    Class<?> $STRawGroupDir = loader.loadClass("org.stringtemplate.v4.STRawGroupDir");
+                    Object group = $STRawGroupDir
+                        .getConstructor(String.class, String.class, char.class, char.class)
+                        .newInstance(path.getParent().toString(), options.encoding.name(), options.startDelim, options.stopDelim);
+                    $STRawGroupDir.getField("verbose").set(group, options.verbose);
+                    $STRawGroupDir
+                        .getMethod("setListener", $STErrorListener)
+                        .invoke(group, errorHandler);
+                    st = $STRawGroupDir
+                        .getMethod("getInstanceOf", String.class)
+                        .invoke(group, stripExtension(path.getFileName().toString()));
 
-                registerAdaptors(group);
+                    registerAdaptors(group);
+                }
+                catch (ClassNotFoundException ex)
+                {
+                    throw new RuntimeException("\"raw\" option only available with StringTemplate 4.0.7 or later", ex);
+                }
             }
             else if (path.getFileName().toString().endsWith(".stg"))
             {
