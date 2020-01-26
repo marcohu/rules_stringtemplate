@@ -29,7 +29,7 @@ The currently bundled StringTemplate releases are:
 
 | Release Stream | Bundled Versions         |
 |----------------|--------------------------|
-| 4              | 4.0.2, 4.0.7, 4.0.8, 4.1 |
+| 4              | 4.0, 4.0.2, 4.0.3, 4.0.4, 4.0.7, 4.0.8, 4.1, 4.2, 4.3 |
 
 While not recommended, it is possible to specify just the major version to load
 the most recent bundled release for a stream. With rules_stringtemplate 0.1.0 the
