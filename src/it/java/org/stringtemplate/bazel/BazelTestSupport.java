@@ -3,6 +3,7 @@ package org.stringtemplate.bazel;
 import static org.junit.Assert.assertEquals;
 
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 
 /**
@@ -24,9 +25,15 @@ class BazelTestSupport
     protected Path build(String target) throws Exception
     {
         TestWorkspace workspace = new TestWorkspace();
+        Path repositoryCache = Paths
+            .get(System.getProperty("user.home"))
+            .resolve(".cache/bazel/_bazel_" + System.getProperty("user.name") +  "/cache/repos/v1");
 
+        // TODO by default, Bazel 2.0 does not seem to share the repository cache for
+        // tests which causes the dependencies to be downloaded each time, we therefore
+        // try to share it manually
         Process p = new ProcessBuilder()
-            .command("bazel", "build", target)
+            .command("bazel", "build", "--repository_cache", repositoryCache.toString(), target)
             .directory(workspace.root.toFile())
             .inheritIO()
             .start();
